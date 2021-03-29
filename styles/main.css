@@ -1,0 +1,209 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* reset code */
+@import url('./reset.css');
+
+/*=====================================
+    * main *
+=======================================*/
+
+.main .container {
+    background: #fff;
+    max-width: 750px;
+    margin: 100px auto 0;
+    box-shadow: 1px 2px 5px #333;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.main .container::after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+/* img_area */
+
+.img_area {
+    display: flex;
+    width: 50%;
+    height: 420px;
+    position: relative;
+    background: url('../assets/lake.jpg') no-repeat;
+    float: left;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_area::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    content: '';
+    opacity: 0.55;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.btn {
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: box-shadow 0.3s;
+}
+
+.btn:hover {
+    box-shadow: inset 2px 3px 5px #333;
+}
+
+.btn-fb {
+    background: #32508e;
+}
+
+.btn-tw {
+    background: #55acee;
+}
+
+.btn-gl {
+    background: #dd4b39;
+}
+
+/* form_area */
+
+.form_area {
+    width: 50%;
+    position: relative;
+    float: left;
+    padding: 15px 15px 0;
+}
+
+.form_area #close {
+    position: absolute;
+    top: -8px;
+    right: 22px;
+    font-size: 3rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.form_area .form_heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.form_area input[type='text'],
+.form_area input[type='email'],
+.form_area input[type='password'] {
+    width: 100%;
+    padding: 10px;
+    margin: 12px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #ccc;
+    transition: border-bottom 0.2s ease-in;
+}
+
+.form_area input:not([type='checkbox'])::placeholder,
+.form_area input:not([type='submit'])::placeholder {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.form_area input:not([type='submit']):focus {
+    border-bottom: 1px solid #2b32bf;
+}
+
+.form_area input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.terms {
+    display: inline-block;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.terms a {
+    opacity: 0.8;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.mbl_btn_grp {
+    display: none;
+}
+
+.form_area input[type='submit'] {
+    width: 100%;
+    background: #16a085;
+    color: #fff;
+    font-size: 1rem;
+    margin: 20px 0 10px;
+    padding: 10px;
+}
+
+.form_area input[type='submit']:hover,
+.form_area input[type='submit']:focus {
+    opacity: 0.8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+}
+
+.form_area input[type='submit']:active {
+    opacity: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+}
+
+@media only screen and (max-width: 767px) {
+    .main .container {
+        width: 80%;
+    }
+    .img_area {
+        display: none;
+    }
+    .form_area {
+        width: 100%;
+    }
+    .mbl_btn_grp {
+        display: block;
+        width: 70%;
+        margin: 10px auto 0;
+        text-align: center;
+    }
+    .mbl_btn_grp button {
+        background: #fff;
+        margin-right: 10px;
+    }
+    .mbl_btn_grp button img {
+        width: 40px;
+        height: 40px;
+    }
+}
